@@ -1,0 +1,30 @@
+@use '../variables';
+
+.container {
+  min-width: 141px;
+  height: 48px;
+}
+
+.primary {
+  background-color: variables.$violet;
+  color: variables.$white;
+  &:hover {
+    background-color: variables.$light-violet;
+  }
+}
+
+.secondary {
+  background-color: rgba(variables.$violet, .15);
+  color: variables.$violet;
+  &:hover {
+    background-color: rgba(variables.$violet, .3);
+  }
+}
+
+.dark {
+  background-color: variables.$very-dard-blue;
+  color: variables.$white;
+  &:hover {
+    background-color: variables.$dark-gray;
+  }
+}
