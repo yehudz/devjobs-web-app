@@ -16,6 +16,11 @@ module.exports = {
       'gray': '#9DAEC2',
       'dark-gray': '#6E8098',
     },
+    fontFamily: {
+      'sans': ['Kumbh San', 'sans-serif'],
+      'serif': ['sans-serif'],
+      'body': ['"Kumbh San"'],
+    }
   },
   plugins: [],
 }
