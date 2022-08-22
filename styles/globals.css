@@ -39,3 +39,21 @@ h4 {
   line-height: 26px;
   font-weight: 300;
 }
+
+.topbar {
+  background-image: url('/assets/mobile/bg-pattern-header.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .topbar {
+    background-image: url('/assets/tablet/bg-pattern-header.svg');
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .topbar {
+    background-image: url('/assets/desktop/bg-pattern-header.svg');
+  }
+}
