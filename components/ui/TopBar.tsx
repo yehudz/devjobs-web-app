@@ -3,6 +3,7 @@ import ToggleSwitch from "./ToggleSwitch"
 const TopBar: React.FC = ()=> {
   return(
     <div 
+      data-testid="topbar-container"
       className="
         topbar
         relative
@@ -15,6 +16,7 @@ const TopBar: React.FC = ()=> {
       "
     >
       <div 
+        data-testid="main-logo"
         className="
           logo
           absolute
