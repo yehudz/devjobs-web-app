@@ -5,11 +5,12 @@ import styles from '../styles/Home.module.css'
 
 import SearchInput from '../components/ui/SearchInput'
 import ToggleSwitch from '../components/ui/ToggleSwitch'
+import CheckboxComponent from '../components/ui/Checkbox'
 
 const Home: NextPage = (props) => {
   return(
     <>
-      <ToggleSwitch />
+      <CheckboxComponent />
     </>
   )
 }
