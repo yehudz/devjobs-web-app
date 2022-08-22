@@ -3,26 +3,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import Button from '../components/ui/Button'
+import SearchInput from '../components/ui/SearchInput'
 
 const Home: NextPage = (props) => {
   return(
     <>
-      <Button
-        type="primary"
-      >
-        Button 1
-      </Button>
-      <Button
-        type="secondary"
-      >
-        Button 2
-      </Button>
-      <Button
-        type="dark"
-      >
-        Button 2 dark
-      </Button>
+      <SearchInput 
+        placeholder='Filter by title, companies, experties...'
+        icon="assets/desktop/icon-search.svg"
+      />
+      <SearchInput 
+        placeholder='Filter by location'
+        icon="assets/mobile/icon-filter.svg"
+      />
     </>
   )
 }
