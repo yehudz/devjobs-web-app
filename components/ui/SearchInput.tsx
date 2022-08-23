@@ -5,7 +5,9 @@ const SearchInput: React.FC<InputProps> = ({
 }) => {
   
   return(
-    <div className="
+    <div
+      data-testid="search-bar-container" 
+      className="
         flex
         items-center
         h-[48px]

@@ -81,6 +81,7 @@ const SearchFilterComp: React.FC = ()=> {
         "
       >
         <div 
+          data-testid="filter-button"
           className="
             filter-btn
             md:hidden
@@ -92,27 +93,31 @@ const SearchFilterComp: React.FC = ()=> {
             alt="Filter" 
           />
         </div>
-        <Button 
-          type="primary"
+        <div 
+          data-testid="search-button"
         >
-          <img 
-            className="
-              search-icon w-5
-              md:hidden
-            "
-            src="assets/desktop/icon-search.svg" 
-            alt="Search button" 
-          />
-          <p
-            className="
-              hidden
-              md:block
-              text-body
-            "
+          <Button 
+            type="primary"
           >
-            Search
-          </p>
-        </Button>
+            <img 
+              className="
+                search-icon w-5
+                md:hidden
+              "
+              src="assets/desktop/icon-search.svg" 
+              alt="Search button" 
+            />
+            <p
+              className="
+                hidden
+                md:block
+                text-body
+              "
+            >
+              Search
+            </p>
+          </Button>
+        </div>
       </div>
     </div>
   )
