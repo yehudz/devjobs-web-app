@@ -6,9 +6,10 @@ export type ButtonProps = {
 };
 
 export type InputProps = {
-  placeholder: string,
+  placeholder: string
   icon: string
   isMobile?: boolean
+  isSearch: boolean
 };
 
 export type JobCardInfo = {
@@ -28,4 +29,13 @@ export type JobCardIcon = {
 export type JobPosting = {
   icon: JobCardIcon
   info: JobCardInfo
+}
+
+export type SearchContext = {
+  searchQuery: string
+  setSearchQuery: (searchQuery: string)=>void
+  filterByLocation: string
+  setFilterByLocation: (filterByLocation: string)=>void
+  fullTimeFilter: boolean
+  setFullTimeFilter: (fullTimeFilter: boolean)=>void
 }
