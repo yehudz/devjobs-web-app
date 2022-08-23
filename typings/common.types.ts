@@ -31,6 +31,29 @@ export type JobPosting = {
   info: JobCardInfo
 }
 
+export type JobPost = {
+  job: {
+    id: number
+    company: string
+    logo: string
+    logoBackground: string
+    position: string
+    postedAt: string
+    location: string
+    website: string
+    apply: string
+    description: string
+    requirements: {
+      content: string
+      items: string[]
+    }
+    role: {
+      content: string
+      items: string[]
+    }
+  }
+}
+
 export type SearchContext = {
   searchQuery: string
   setSearchQuery: (searchQuery: string)=>void
