@@ -5,6 +5,7 @@ const ToggleSwitch = ()=> {
 
     return (
         <div 
+          data-testid="toggle-theme-container"
           className="
             relative 
             flex 
