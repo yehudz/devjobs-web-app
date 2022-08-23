@@ -1,8 +1,11 @@
-import Button from "./Button"
-import CheckboxComponent from "./Checkbox"
-import SearchInput from "./SearchInput"
-
+import { useState } from "react";
+import Button from "../Button"
+import CheckboxComponent from "../Checkbox"
+import SearchInput from "../SearchInput"
+import MobileFilterBtn from './MobileFilterBtn'
 const SearchFilterComp: React.FC = ()=> {
+  // Set to open pop up for mobile filtering
+  const [open, setOpen] = useState<boolean>(false);
   return(
     <div 
       className="
@@ -51,6 +54,7 @@ const SearchFilterComp: React.FC = ()=> {
           icon="assets/desktop/icon-location.svg"
         />
       </div>
+      
       <div 
         className="
           search-full-time
@@ -84,19 +88,7 @@ const SearchFilterComp: React.FC = ()=> {
           z-50
         "
       >
-        <div 
-          data-testid="filter-button"
-          className="
-            filter-btn
-            md:hidden
-            cursor-pointer
-          "
-        >
-          <img 
-            src="assets/mobile/icon-filter.svg" 
-            alt="Filter" 
-          />
-        </div>
+        <MobileFilterBtn />
         <div 
           data-testid="search-button"
         >
