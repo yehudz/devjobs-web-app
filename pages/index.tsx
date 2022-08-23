@@ -11,7 +11,7 @@ const Home: NextPage = (props) => {
     <div 
       className="
         main
-        h-screen
+        h-full
         w-full
         bg-light-grey
         dark:bg-midnight 
