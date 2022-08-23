@@ -9,10 +9,9 @@ const PostingsContainer: React.FC<ContentProps> = ({children})=> {
         flex-row
         flex-wrap
         justify-center
-        mt-[40px]
+        mt-[8px]
         mx-auto
       "
-
     >
       {children}
     </div>
