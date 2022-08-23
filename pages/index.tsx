@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Button from '../components/ui/Button'
 const Home: NextPage = (props) => {
   const [limit, setLimit] = useState<number>(12)
+
   return(
     <div 
       className="
