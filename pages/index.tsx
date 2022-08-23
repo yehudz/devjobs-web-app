@@ -7,8 +7,6 @@ const Home: NextPage = (props) => {
         main
         h-screen
         w-full
-        bg-light-grey
-        dark:bg-midnight 
       "
     >
     </div>
