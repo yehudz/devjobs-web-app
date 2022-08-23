@@ -1,4 +1,4 @@
-import SearchFilterComp from "./SearchFilterComp"
+import SearchFilterComp from "./SearchFilterComp/SearchFilterComp"
 
 const SecondaryTopBar: React.FC = ()=> {
   return(
