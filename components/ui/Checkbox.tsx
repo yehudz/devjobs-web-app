@@ -6,7 +6,7 @@ const CheckboxComponent = ()=> {
   function toggleCheckbox() {
     setChecked((prevCheck)=> prevCheck = !prevCheck)
   }
-  console.log(checked)
+
   return(
     <div 
       onClick={toggleCheckbox}
