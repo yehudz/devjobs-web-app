@@ -47,7 +47,7 @@ const Home: NextPage = (props) => {
           flex
           justify-center
           button-container
-          pb-8
+          py-8
         "
       >
         <Button type="primary">Load More</Button>
