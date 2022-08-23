@@ -2,8 +2,8 @@ import { useState, useContext, useEffect } from "react"
 import searchContext from "../../context/searchContext"
 
 const CheckboxComponent = ()=> {
-  const [checked, setChecked] = useState<boolean>(false)
-  const {setFullTimeFilter} = useContext(searchContext)
+  const {fullTimeFilter, setFullTimeFilter} = useContext(searchContext)
+  const [checked, setChecked] = useState<boolean>(fullTimeFilter)
   function toggleCheckbox() {
     setChecked((prevCheck)=> prevCheck = !prevCheck)
   }

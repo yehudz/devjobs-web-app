@@ -3,24 +3,27 @@ import {
   DialogContent,
   Divider,
 } from '@mui/material';
+import { useContext } from 'react';
+import searchContext from '../../../context/searchContext';
 
 import type { FilterPopupProps } from '../../../typings/common.interfaces';
 import Button from '../Button';
 import CheckboxComponent from '../Checkbox';
 import SearchInput from '../SearchInput';
-
 const FilterPopup: React.FC<FilterPopupProps> = ({
   open,
   setOpen
 })=> {
-
-  function handleClickOpen() {
-    setOpen(true);
-  };
+  const {setSearching} = useContext(searchContext)
 
   function handleClose() {
     setOpen(false);
   };
+
+  function setSearch() {
+    setSearching(true)
+    handleClose()
+  }
 
   return (
     <div 
@@ -45,6 +48,7 @@ const FilterPopup: React.FC<FilterPopupProps> = ({
               icon="assets/desktop/icon-location.svg" 
               placeholder='Filter by location...'
               isMobile={true}
+              isSearch={false}
             />
           </div>
         </DialogContent>
@@ -78,6 +82,7 @@ const FilterPopup: React.FC<FilterPopupProps> = ({
         <DialogContent>
           <div
             data-testid="mobile-search-button"
+            onClick={setSearch}
             className='
               flex
               justify-center
