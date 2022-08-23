@@ -2,11 +2,13 @@ export type ButtonProps = {
   children: JSX.Element[] | string,
   type: string
   icon?: string
+  isPopup?: boolean
 };
 
 export type InputProps = {
   placeholder: string,
   icon: string
+  isMobile?: boolean
 };
 
 export type JobCardInfo = {

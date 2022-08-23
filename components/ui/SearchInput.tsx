@@ -1,7 +1,8 @@
 import { InputProps } from "../../typings/common.types";
 const SearchInput: React.FC<InputProps> = ({
   placeholder,
-  icon
+  icon,
+  isMobile
 }) => {
   
   return(
@@ -17,10 +18,10 @@ const SearchInput: React.FC<InputProps> = ({
       <img 
         src={icon} 
         alt="Search Input" 
-        className="
-          hidden
+        className={`
+          ${!isMobile ? 'hidden': ''}
           md:block
-        "
+        `}
       />
       <input 
         className="
