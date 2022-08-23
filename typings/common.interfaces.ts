@@ -11,3 +11,8 @@ export interface JobCardProps {
 export interface ContentProps {
   children: JSX.Element[]
 }
+
+export interface FilterPopupProps {
+  open: boolean
+  setOpen: (open:boolean)=>void
+}
