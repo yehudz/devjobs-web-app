@@ -23,6 +23,7 @@ const SearchFilterComp: React.FC = ()=> {
           md:border-r-2
           md:border-light-grey
           md:px-4
+          dark:border-dark-gray
         "
       >
         <SearchInput 
@@ -41,6 +42,7 @@ const SearchFilterComp: React.FC = ()=> {
           lg:flex-[2_2-0%]
           md:border-r-2
           md:border-light-grey
+          dark:border-dark-gray
           px-5
         "
       >
@@ -67,6 +69,8 @@ const SearchFilterComp: React.FC = ()=> {
           className="
             font-bold
             ml-5
+            text-very-dark-blue
+            dark:text-white
           "
         >Full time</h5>
       </div>

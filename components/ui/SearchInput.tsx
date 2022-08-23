@@ -27,13 +27,13 @@ const SearchInput: React.FC<InputProps> = ({
           focus:outline-none
           ml-4
           w-full
-          bg-transparent
           placeholder-gray
           font-light
           dark:placeholder-light-grey
           truncate
         "
         placeholder={placeholder}
+        style={{background: 'transparent'}}
       />
     </div>
   )
