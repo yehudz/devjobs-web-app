@@ -6,6 +6,7 @@ import JobCard from '../components/ui/JobCard/JobCard'
 import { useContext, useEffect, useState } from 'react'
 import Button from '../components/ui/Button'
 import searchContext from '../context/searchContext'
+import Link from 'next/link'
 const Home: NextPage = (props) => {
   const [jobPosts, setJobPosts] = useState(data)
   const [limit, setLimit] = useState<number>(12)
@@ -88,11 +89,27 @@ const Home: NextPage = (props) => {
             location: jobPosting.location
           }
           return(
-            <JobCard
+            <Link 
+              href={`/jobs/${jobPosting.id}`}
               key={jobPosting.id} 
-              icon={icon}
-              info={info}
-            />
+            >
+              <a 
+                className="
+                container
+                relative
+                pt-6
+                max-w-[90%]
+                mt-7
+                md:max-w-[44%]
+                lg:max-w-[32%]
+              "
+              >
+                <JobCard
+                  icon={icon}
+                  info={info}
+                />
+              </a>
+            </Link>
           )
         })}
 
