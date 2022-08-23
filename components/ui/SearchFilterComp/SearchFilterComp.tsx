@@ -103,6 +103,7 @@ const SearchFilterComp: React.FC = ()=> {
         >
           <Button 
             type="primary"
+            isPopup={false}
           >
             <img 
               className="

@@ -50,6 +50,14 @@ h4 {
   filter: brightness(0) invert(1);
 }
 
+.large-btn {
+  min-width: 100%;
+}
+
+.small-btn {
+  min-width: 48px;
+}
+
 @media screen and (min-width: 768px) {
   .topbar {
     background-image: url('/assets/tablet/bg-pattern-header.svg');

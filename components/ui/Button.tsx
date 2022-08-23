@@ -26,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   return(
     <button 
       className={`
+        ${isPopup && 'large-btn'}
         ${styles.container}
         ${style} 
         flex
@@ -33,7 +34,6 @@ const Button: React.FC<ButtonProps> = ({
         items-center
         rounded-md
         font-regular
-        ${isPopup ? 'min-w-full' : 'min-w-[48px]'}
         min-w-[48px]
         md:min-w-[80px]
         lg:min-w-[141px]
