@@ -1,6 +1,7 @@
 export type ButtonProps = {
-  children: string,
+  children: JSX.Element | string,
   type: string
+  icon?: string
 };
 
 export type InputProps = {

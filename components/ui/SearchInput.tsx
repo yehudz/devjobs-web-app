@@ -26,7 +26,9 @@ const SearchInput: React.FC<InputProps> = ({
           w-full
           bg-transparent
           placeholder-gray
+          font-light
           dark:placeholder-light-grey
+          truncate
         "
         placeholder={placeholder}
       />

@@ -1,21 +1,26 @@
+import SearchFilterComp from "./SearchFilterComp"
+
 const SecondaryTopBar: React.FC = ()=> {
   return(
     <div
       data-testid="secondary-top-bar-container"
       className="
+        flex
+        items-center
         relative
         h-[80px]
         w-full
         max-w-[90%]
         xl:max-w-[1100px]
         mx-auto
+        p-3
         mt-[-40px]
         bg-white
         dark:bg-very-dark-blue
         rounded-lg
       "
     >
-
+      <SearchFilterComp />
     </div>
   )
 }

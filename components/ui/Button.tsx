@@ -3,7 +3,7 @@ import styles from '../../styles/ui/button.module.scss';
 import { useEffect, useState } from "react";
 const Button: React.FC<ButtonProps> = ({
   children,
-  type
+  type,
 }) => {
   const [style, setStyle] = useState<any>()
   useEffect(()=> {
@@ -17,6 +17,9 @@ const Button: React.FC<ButtonProps> = ({
       case 'dark':
         setStyle(styles.dark)
         break
+      case 'icon':
+        setStyle(style.iconBtn)
+        break;
     }
   }, [])
   return(
@@ -24,8 +27,13 @@ const Button: React.FC<ButtonProps> = ({
       className={`
         ${styles.container}
         ${style} 
-        rounded-lg
+        flex
+        justify-center
+        items-center
+        rounded-md
         font-bold
+        min-w-[48px]
+        md:min-w-[141px]
       `}
     >
       {children}
