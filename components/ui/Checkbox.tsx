@@ -6,6 +6,7 @@ const CheckboxComponent = ()=> {
   function toggleCheckbox() {
     setChecked((prevCheck)=> prevCheck = !prevCheck)
   }
+  console.log(checked)
   return(
     <div 
       onClick={toggleCheckbox}
@@ -13,14 +14,17 @@ const CheckboxComponent = ()=> {
         flex
         justify-center
         items-center 
-        bg-${checked ? 'violet' : 'gray'}
-        border
-        border-gray
         h-6
         w-6
         rounded-sm
         cursor-pointer
       `}
+      style={
+          {
+            backgroundColor: checked ? 
+            '#5964E0' : 
+            '#F4F6F8'
+          }}
     >
       {checked && <img 
         src="assets/desktop/icon-check.svg" 
