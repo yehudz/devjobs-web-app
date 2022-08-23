@@ -21,3 +21,8 @@ export type JobCardIcon = {
   color: string
   company: string
 }
+
+export type JobPosting = {
+  icon: JobCardIcon
+  info: JobCardInfo
+}

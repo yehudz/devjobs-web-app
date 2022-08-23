@@ -8,3 +8,6 @@ export interface JobCardProps {
   icon: JobCardIconProps
   info: JobCardInfoProps
 }
+export interface ContentProps {
+  children: JSX.Element[]
+}
