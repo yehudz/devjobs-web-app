@@ -5,13 +5,13 @@ const ToggleSwitch = ()=> {
 
     return (
         <div 
+          data-testid="toggle-theme-container"
           className="
             relative 
             flex 
             flex-col 
             items-center 
             justify-center 
-            min-h-screen 
             overflow-hidden
           "
           >
@@ -19,7 +19,7 @@ const ToggleSwitch = ()=> {
             <img 
               src="assets/desktop/icon-sun.svg" 
               alt="Ligth Theme"
-              className="mr-6 w-full h-full"
+              className="mr-5 w-full h-full"
             />
             <label 
               className="
@@ -41,20 +41,20 @@ const ToggleSwitch = ()=> {
                     setEnabled(!enabled);
                 }}
                 className="
-                  w-12 
-                  h-7 
+                  w-[45px] 
+                  h-[23px] 
                   bg-white
                   rounded-full 
                   peer 
-                  peer-checked:after:translate-x-[100%] 
+                  peer-checked:after:translate-x-[128%] 
                   after:content-[''] 
                   after:absolute 
                   after:top-[4px] 
-                  after:left-[4px] 
+                  after:left-[6px] 
                   after:bg-violet 
                   after:rounded-full 
-                  after:h-5 
-                  after:w-5 
+                  after:h-[15px] 
+                  after:w-[15px] 
                   after:transition-all 
                 "
               ></div>
@@ -62,7 +62,7 @@ const ToggleSwitch = ()=> {
             <img 
               src="assets/desktop/icon-moon.svg" 
               alt="Ligth Theme"
-              className="ml-1 mt-1 w-full"
+              className="ml-0 mt-1 w-full"
             />
           </div>
         </div>
