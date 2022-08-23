@@ -13,6 +13,9 @@ const JobCard: React.FC<JobCardProps> = ({
         relative
         pt-6
         max-w-[90%]
+        mt-7
+        md:max-w-[44%]
+        lg:max-w-[32%]
       "
     >
       <JobCardIcon 
