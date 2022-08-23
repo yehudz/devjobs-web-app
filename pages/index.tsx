@@ -6,7 +6,6 @@ import JobCard from '../components/ui/JobCard/JobCard'
 import { useContext, useEffect, useState } from 'react'
 import Button from '../components/ui/Button'
 import searchContext from '../context/searchContext'
-import { includes } from 'cypress/types/lodash'
 const Home: NextPage = (props) => {
   const [jobPosts, setJobPosts] = useState(data)
   const [limit, setLimit] = useState<number>(12)
@@ -34,9 +33,9 @@ const Home: NextPage = (props) => {
     ]
     if (searching) {
       let filteredData = data.filter(
-        jobPost=> {
+        (jobPost: any)=> {
           return Object.keys(jobPost).some(
-            key=> {
+            (key)=> {
               return includeColumns.includes(key) ?
               jobPost[key]
               .toLowerCase()
@@ -49,6 +48,14 @@ const Home: NextPage = (props) => {
         jobPost.location
         .toLowerCase()
         .includes(filterByLocation.toLowerCase())
+      ).filter(jobPost=> 
+         {
+          if (fullTimeFilter === 
+            (jobPost.contract === 'Full Time'))
+            return jobPost
+          else if (!fullTimeFilter)
+            return jobPost
+         }
       )
       setJobPosts(filteredData)
     }
