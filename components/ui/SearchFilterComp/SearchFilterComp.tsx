@@ -2,10 +2,10 @@ import { useState } from "react";
 import Button from "../Button"
 import CheckboxComponent from "../Checkbox"
 import SearchInput from "../SearchInput"
+import FilterPopup from "./FilterPopup";
 import MobileFilterBtn from './MobileFilterBtn'
 const SearchFilterComp: React.FC = ()=> {
-  // Set to open pop up for mobile filtering
-  const [open, setOpen] = useState<boolean>(false);
+  const [openPopup, setOpenPopup] = useState<boolean>(false)
   return(
     <div 
       className="
@@ -88,7 +88,14 @@ const SearchFilterComp: React.FC = ()=> {
           z-50
         "
       >
-        <MobileFilterBtn />
+        <MobileFilterBtn 
+          open={openPopup}
+          setOpen={setOpenPopup}
+        />
+        <FilterPopup 
+          open={openPopup}
+          setOpen={setOpenPopup}
+        />
         <div 
           data-testid="search-button"
         >

@@ -1,4 +1,9 @@
-const MobileFilterBtn: React.FC = ()=> {
+import { FilterPopupProps } from "../../../typings/common.interfaces";
+
+const MobileFilterBtn: React.FC<FilterPopupProps> = ({
+  open,
+  setOpen
+})=> {
   return(
     <div 
       data-testid="filter-button"
@@ -7,6 +12,7 @@ const MobileFilterBtn: React.FC = ()=> {
         md:hidden
         cursor-pointer
       "
+      onClick={()=> setOpen(open = !open)}
     >
       <img 
         src="assets/mobile/icon-filter.svg" 
