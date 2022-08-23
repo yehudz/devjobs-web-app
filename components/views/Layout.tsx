@@ -3,6 +3,7 @@ interface LayoutProps {
 }
 
 import TopBar from "../ui/TopBar"
+import SecondaryTopBar from "../ui/SecondaryTopBar"
 
 const Layout: React.FC<LayoutProps> =({ children })=> {
   return (
@@ -13,6 +14,7 @@ const Layout: React.FC<LayoutProps> =({ children })=> {
       "
     >
       <TopBar />
+      <SecondaryTopBar />
       <main>{children}</main>
     </main>
   )
