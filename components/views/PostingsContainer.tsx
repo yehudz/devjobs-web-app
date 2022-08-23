@@ -11,6 +11,9 @@ const PostingsContainer: React.FC<ContentProps> = ({children})=> {
         justify-center
         mt-[8px]
         mx-auto
+        gap-4
+        lg:max-w-[90%]
+        xl:max-w-[1100px]
       "
     >
       {children}
