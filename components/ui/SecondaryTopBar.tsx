@@ -13,7 +13,7 @@ const SecondaryTopBar: React.FC = ()=> {
         max-w-[90%]
         xl:max-w-[1100px]
         mx-auto
-        p-3
+        px-3
         mt-[-40px]
         bg-white
         dark:bg-very-dark-blue

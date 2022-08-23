@@ -9,6 +9,7 @@ const SearchInput: React.FC<InputProps> = ({
         flex
         items-center
         h-[48px]
+        w-full
       "
     >
       <img 

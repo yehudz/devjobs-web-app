@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  children: JSX.Element | string,
+  children: JSX.Element[] | string,
   type: string
   icon?: string
 };

@@ -1,12 +1,11 @@
 import { useState } from "react"
 
 const CheckboxComponent = ()=> {
-  const [checked, setChecked] = useState<boolean>(true)
+  const [checked, setChecked] = useState<boolean>(false)
 
   function toggleCheckbox() {
     setChecked((prevCheck)=> prevCheck = !prevCheck)
   }
-  console.log(checked)
   return(
     <div 
       onClick={toggleCheckbox}
@@ -15,7 +14,8 @@ const CheckboxComponent = ()=> {
         justify-center
         items-center 
         bg-${checked ? 'violet' : 'gray'}
-        hover:bg-light-violet
+        border
+        border-gray
         h-6
         w-6
         rounded-sm
