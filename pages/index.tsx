@@ -88,7 +88,8 @@ const Home: NextPage = (props) => {
             location: jobPosting.location
           }
           return(
-            <JobCard 
+            <JobCard
+              key={jobPosting.id} 
               icon={icon}
               info={info}
             />
