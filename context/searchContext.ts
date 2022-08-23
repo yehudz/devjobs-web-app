@@ -7,6 +7,8 @@ const searchContext = createContext<SearchContext>({
   setFilterByLocation() {},
   fullTimeFilter: false,
   setFullTimeFilter() {},
+  searching: false,
+  setSearching() {}
 
 })
 export default searchContext

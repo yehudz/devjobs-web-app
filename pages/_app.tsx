@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [filterByLocation, setFilterByLocation] = useState<string>('')
   const [fullTimeFilter, setFullTimeFilter] = useState<boolean>(false)
+  const [searching, setSearching] = useState<boolean>(false)
   return (
     <searchContext.Provider
       value={{
@@ -15,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         filterByLocation,
         setFilterByLocation,
         fullTimeFilter,
-        setFullTimeFilter
+        setFullTimeFilter,
+        searching,
+        setSearching
       }}
     >
       <Layout>

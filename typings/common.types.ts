@@ -38,4 +38,6 @@ export type SearchContext = {
   setFilterByLocation: (filterByLocation: string)=>void
   fullTimeFilter: boolean
   setFullTimeFilter: (fullTimeFilter: boolean)=>void
+  searching: boolean
+  setSearching: (searching: boolean)=>void
 }
