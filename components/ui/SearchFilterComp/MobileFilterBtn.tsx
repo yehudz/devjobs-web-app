@@ -15,7 +15,7 @@ const MobileFilterBtn: React.FC<FilterPopupProps> = ({
       onClick={()=> setOpen(open = !open)}
     >
       <img 
-        src="assets/mobile/icon-filter.svg" 
+        src="/assets/mobile/icon-filter.svg" 
         alt="Filter" 
       />
     </div>

@@ -7,17 +7,7 @@ const JobCard: React.FC<JobCardProps> = ({
   info,
 })=> {
   return(
-    <div 
-      className="
-        container
-        relative
-        pt-6
-        max-w-[90%]
-        mt-7
-        md:max-w-[44%]
-        lg:max-w-[32%]
-      "
-    >
+    <>
       <JobCardIcon 
           image={icon.image}
           color={icon.color}
@@ -42,7 +32,7 @@ const JobCard: React.FC<JobCardProps> = ({
           location={info.location}
         />
       </div>
-    </div>
+    </>
   )
 }
 

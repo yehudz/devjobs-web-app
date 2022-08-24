@@ -5,7 +5,8 @@ import searchContext from "../../context/searchContext";
 const Button: React.FC<ButtonProps> = ({
   children,
   type,
-  isPopup
+  isPopup,
+  isMobile
 }) => {
   const {setSearching} = useContext(searchContext)
   const [style, setStyle] = useState<any>()
@@ -43,7 +44,10 @@ const Button: React.FC<ButtonProps> = ({
         items-center
         rounded-md
         font-regular
-        min-w-[48px]
+        font-bold
+        px-6
+        min-w-full
+        sm:min-w-[48px]
         md:min-w-[80px]
         lg:min-w-[141px]
       `}

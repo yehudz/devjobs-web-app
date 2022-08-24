@@ -17,7 +17,7 @@ const ToggleSwitch = ()=> {
           >
           <div className="flex items-center">
             <img 
-              src="assets/desktop/icon-sun.svg" 
+              src="/assets/desktop/icon-sun.svg" 
               alt="Ligth Theme"
               className="mr-5 w-full h-full"
             />
@@ -60,7 +60,7 @@ const ToggleSwitch = ()=> {
               ></div>
             </label>
             <img 
-              src="assets/desktop/icon-moon.svg" 
+              src="/assets/desktop/icon-moon.svg" 
               alt="Ligth Theme"
               className="ml-0 mt-1 w-full"
             />

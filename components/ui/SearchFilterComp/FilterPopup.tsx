@@ -45,7 +45,7 @@ const FilterPopup: React.FC<FilterPopupProps> = ({
             data-testid="filter-location"
           >
             <SearchInput
-              icon="assets/desktop/icon-location.svg" 
+              icon="/assets/desktop/icon-location.svg" 
               placeholder='Filter by location...'
               isMobile={true}
               isSearch={false}
