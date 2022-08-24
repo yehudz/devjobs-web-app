@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import PostingsContainer from '../components/views/PostingsContainer'
 import data from './data.json'
-import { JobCardIcon, JobCardInfo, JobPostCard } from '../typings/common.types'
+import type { JobCardIcon, JobCardInfo, JobPost, JobPostCard } from '../typings/common.types'
 import JobCard from '../components/ui/JobCard/JobCard'
 import { useContext, useEffect, useState } from 'react'
 import Button from '../components/ui/Button'
@@ -10,7 +10,7 @@ import SecondaryTopBar from "../components/ui/SecondaryTopBar"
 
 import Link from 'next/link'
 const Home: NextPage = (props) => {
-  const [jobPosts, setJobPosts] = useState(props.jobs)
+  const [jobPosts, setJobPosts] = useState<JobPostCard[]>(props.jobs)
   const [limit, setLimit] = useState<number>(12)
   const {
     searchQuery,
@@ -26,7 +26,7 @@ const Home: NextPage = (props) => {
       fullTimeFilter !== false
      ) setLimit(data.length)
      else setLimit(limit)
-  }, [searchQuery, filterByLocation, fullTimeFilter])
+  }, [searchQuery, filterByLocation, fullTimeFilter, limit])
 
   // Sets the filtered data
   useEffect(()=> {
@@ -36,7 +36,7 @@ const Home: NextPage = (props) => {
     ]
     if (searching) {
       let filteredData = data.filter(
-        (jobPost: any)=> {
+        (jobPost: JobPo)=> {
           return Object.keys(jobPost).some(
             (key)=> {
               return includeColumns.includes(key) ?
