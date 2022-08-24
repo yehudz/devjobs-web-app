@@ -57,6 +57,7 @@ export type JobPost = {
     }
   }
 }
+
 export type JobPostCard = {
   id: number
   company: string
