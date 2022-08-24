@@ -5,6 +5,7 @@ import { JobPost } from '../../typings/common.types'
 import data from '../data.json'
 import Link from 'next/link'
 import Button from '../../components/ui/Button'
+import JobPostingFooter from '../../components/views/JobPostingLayout/JobPostingFooter'
 const JobPostPage = (props: JobPost)=> {
   let job = props.job
   let info = {
@@ -38,21 +39,9 @@ const JobPostPage = (props: JobPost)=> {
         tasksBody={job.role.content}
         tasksList={job.role.items}
       />
-      <footer
-        data-testid="content-footer"
-      >
-        <Link href={job.website}>
-          <a
-            data-testid="apply-button"
-          >
-            <Button
-              type='primary'
-            >
-              Apply Now
-            </Button>
-          </a>
-        </Link>
-      </footer>
+      <JobPostingFooter 
+        job={job}
+      />
     </main>
   )
 }
