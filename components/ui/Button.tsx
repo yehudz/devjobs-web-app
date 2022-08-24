@@ -1,11 +1,20 @@
 import { ButtonProps } from "../../typings/common.types";
 import styles from '../../styles/ui/button.module.scss';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import searchContext from "../../context/searchContext";
 const Button: React.FC<ButtonProps> = ({
   children,
-  type
+  type,
+  isPopup
 }) => {
+  const {setSearching} = useContext(searchContext)
   const [style, setStyle] = useState<any>()
+  function handleClick() {
+    setSearching(true)
+    setTimeout(()=> {
+      setSearching(false)
+    }, 1000)
+  }
   useEffect(()=> {
     switch(type) {
       case 'primary':
@@ -17,15 +26,26 @@ const Button: React.FC<ButtonProps> = ({
       case 'dark':
         setStyle(styles.dark)
         break
+      case 'icon':
+        setStyle(style.iconBtn)
+        break;
     }
   }, [])
   return(
     <button 
+      onClick={handleClick}
       className={`
+        ${isPopup && 'large-btn'}
         ${styles.container}
         ${style} 
-        rounded-lg
-        font-bold
+        flex
+        justify-center
+        items-center
+        rounded-md
+        font-regular
+        min-w-[48px]
+        md:min-w-[80px]
+        lg:min-w-[141px]
       `}
     >
       {children}

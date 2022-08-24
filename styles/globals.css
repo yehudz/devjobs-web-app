@@ -46,6 +46,17 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.search-icon {
+  filter: brightness(0) invert(1);
+}
+
+.large-btn {
+  min-width: 100%;
+}
+
+.small-btn {
+  min-width: 48px;
+}
 
 @media screen and (min-width: 768px) {
   .topbar {
