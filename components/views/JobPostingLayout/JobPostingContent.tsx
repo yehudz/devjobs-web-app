@@ -20,7 +20,7 @@ React.FC<JobPostingContentProps> = ({
         dark:bg-very-dark-blue
         mt-6
         max-w-[90%]
-        xl:max-w-[1100px]
+        xl:max-w-[1110px]
         rounded-lg
         mx-auto
         p-6
