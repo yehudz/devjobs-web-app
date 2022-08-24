@@ -9,23 +9,54 @@ React.FC<JobPost> = ({
     <footer
         data-testid="content-footer"
         className="
+          flex
+          justify-center
           w-full
           bg-white
           mt-16
-          p-6
         "
       >
-        <Link href={job.website}>
-          <a
-            data-testid="apply-button"
+        <div 
+          className="
+            wrapper
+            flex
+            justify-between
+            w-full
+            max-w-[90%]
+            xl:max-w-[1100px]
+            items-center
+            py-6
+          "
+        >
+          <div 
+            className="
+              flex
+              flex-col
+              hidden
+              md:flex
+            "
           >
-            <Button
-              type='primary'
+            <h3>{job.position}</h3>
+            <div className="body">
+              {job.company}
+            </div>
+          </div>
+          <Link href={job.website}>
+            <a
+              data-testid="apply-button"
+              className="
+                w-full
+                md:w-auto
+              "
             >
-              Apply Now
-            </Button>
-          </a>
-        </Link>
+              <Button
+                type='primary'
+              >
+                Apply Now
+              </Button>
+            </a>
+          </Link>
+        </div>
       </footer>
   )
 }
