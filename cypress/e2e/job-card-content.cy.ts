@@ -14,15 +14,15 @@ describe('Should display correct content in job post card', ()=> {
     .should('have.css', 'background-color')
   })
   it('has posted at', ()=> {
-    cy.get('[data-testid="posted-at"]')
+    cy.get('[data-testid="content-posted-at"]')
     .invoke('text').should('not.be.empty')
   })
   it('has contract type', ()=> {
-    cy.get('[data-testid="contract-type"]')
+    cy.get('[data-testid="content-contract"]')
     .invoke('text').should('not.be.empty')
   })
   it('has position title', ()=> {
-    cy.get('[data-testid="position-title"]')
+    cy.get('[data-testid="content-info-title"]')
     .invoke('text').should('not.be.empty')
   })
   it('has company name', ()=> {
@@ -30,7 +30,7 @@ describe('Should display correct content in job post card', ()=> {
     .invoke('text').should('not.be.empty')
   })
   it('has location', ()=> {
-    cy.get('[data-testid="location"]')
+    cy.get('[data-testid="content-location"]')
     .invoke('text').should('not.be.empty')
   })
 })
