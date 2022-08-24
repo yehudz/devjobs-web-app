@@ -9,6 +9,7 @@ package-lock.json
 
 # testing
 /coverage
+/cypress
 
 # next.js
 /.next/
