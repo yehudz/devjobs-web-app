@@ -27,3 +27,5 @@ describe('Mobile filter pop up', ()=> {
     cy.get('[data-testid="mobile-search-button"]').should('exist')
   })
 })
+
+export {}

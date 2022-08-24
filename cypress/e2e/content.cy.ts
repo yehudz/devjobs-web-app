@@ -71,3 +71,5 @@ describe('Content shoudl display to the user', ()=> {
     cy.get('[data-testid="apply-button"]').eq(1).should('exist')
   })
 })
+
+export {}

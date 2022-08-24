@@ -34,3 +34,5 @@ describe('Should display correct content in job post card', ()=> {
     .invoke('text').should('not.be.empty')
   })
 })
+
+export {}

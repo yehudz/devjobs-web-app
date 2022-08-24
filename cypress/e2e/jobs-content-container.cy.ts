@@ -6,3 +6,5 @@ describe('Shows the content of job posting in cards', ()=> {
     cy.get('[data-testid="postings-container"]').should('exist')
   })
 })
+
+export {}

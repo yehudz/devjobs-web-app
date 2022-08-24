@@ -16,3 +16,5 @@ describe('Checks for secondary top bar', ()=> {
     cy.get('[data-testid="filter-button"]').should('exist')
   })
 })
+
+export {}

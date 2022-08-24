@@ -12,3 +12,5 @@ describe('Check for top bar', ()=> {
     cy.get('[data-testid="toggle-theme-container"]').should('exist')
   })
 })
+
+export {}

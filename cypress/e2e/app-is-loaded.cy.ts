@@ -3,3 +3,5 @@ describe('App is loaded', () => {
     cy.visit('/')
   })
 })
+
+export {}
