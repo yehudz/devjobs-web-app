@@ -16,3 +16,11 @@ export interface FilterPopupProps {
   open: boolean
   setOpen: (open:boolean)=>void
 }
+
+export interface JobPostingBannerProps {
+  icon: string
+  color: string
+  company: string
+  website: string
+  websiteName: string
+}

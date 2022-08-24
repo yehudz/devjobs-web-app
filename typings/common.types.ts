@@ -40,6 +40,7 @@ export type JobPost = {
     position: string
     postedAt: string
     location: string
+    websiteName: string
     website: string
     apply: string
     description: string
