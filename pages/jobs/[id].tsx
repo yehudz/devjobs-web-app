@@ -2,7 +2,7 @@ import JobPostingBanner from '../../components/views/JobPostingLayout/JobPosting
 import JobPostingContent from '../../components/views/JobPostingLayout/JobPostingContent'
 
 import { JobPost } from '../../typings/common.types'
-import data from '../data.json'
+import data from '../../data.json'
 import JobPostingFooter from '../../components/views/JobPostingLayout/JobPostingFooter'
 const JobPostPage = (props: JobPost)=> {
   let job = props.job

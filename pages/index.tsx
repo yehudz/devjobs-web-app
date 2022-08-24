@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import PostingsContainer from '../components/views/PostingsContainer'
-import data from './data.json'
+import data from '../data.json'
 import type { JobCardIcon, JobCardInfo, JobPost, JobPostCard } from '../typings/common.types'
 import JobCard from '../components/ui/JobCard/JobCard'
 import { useContext, useEffect, useState } from 'react'
