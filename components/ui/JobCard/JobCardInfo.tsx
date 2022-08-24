@@ -23,7 +23,10 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
         text-dark-gray
       "
     >
-      <p className="body">{postedAt}</p>
+      <p 
+        className="body"
+        data-testid="content-posted-at"
+      >{postedAt}</p>
       <div 
         className="
           h-1
@@ -33,9 +36,13 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
           mx-3
         "
       ></div>
-      <p className="body">{contract}</p>
+      <p 
+        className="body"
+        data-testid="content-contract"
+      >{contract}</p>
     </div>
     <h3 
+      data-testid="content-info-title"
       className="
         dark:text-white
         text-midnight
@@ -51,6 +58,7 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
       {company}
     </p>
     <h4 
+      data-testid="content-location"
       className="
         text-violet
         mt-10

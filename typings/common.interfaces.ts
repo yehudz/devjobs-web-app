@@ -24,3 +24,13 @@ export interface JobPostingBannerProps {
   website: string
   websiteName: string
 }
+
+export interface JobPostingContentProps {
+  info: JobCardInfo
+  website: string
+  contentBody: string
+  requirementsBody: string
+  requirementsList: string[]
+  tasksBody: string
+  tasksList: string[]
+}

@@ -16,7 +16,7 @@ export type JobCardInfo = {
   postedAt: string
   contract: string
   position: string
-  company: string
+  company?: string
   location: string
 }
 
@@ -39,6 +39,7 @@ export type JobPost = {
     logoBackground: string
     position: string
     postedAt: string
+    contract: string
     location: string
     websiteName: string
     website: string
