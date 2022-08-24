@@ -19,11 +19,13 @@ React.FC<JobPostingBannerProps> = ({
       md:flex-row
       relative
       h-[230px]
+      md:h-[140px]
       w-full
       max-w-[90%]
       xl:max-w-[1100px]
       mx-auto
       pt-[26px]
+      md:pt-0
       mt-[-40px]
       z-50
     "
@@ -37,7 +39,11 @@ React.FC<JobPostingBannerProps> = ({
         className=" 
           flex
           flex-col
+          md:flex-row
           justify-center
+          md:justify-between
+          md:pl-[180px]
+          md:pr-[40px]
           items-center
           wrapper
           bg-white
@@ -48,24 +54,38 @@ React.FC<JobPostingBannerProps> = ({
           pt-6
         "
       >
-        <h3>{company}</h3>
-        <div 
+        <div
           className="
-            body
-            text-dark-gray
-            mt-2
-            mb-6
+            flex
+            flex-col
+            justify-center
           "
         >
-          <a href={website}>
-            {websiteName}
-          </a>
+          <h3>{company}</h3>
+          <div 
+            className="
+              body
+              text-dark-gray
+              mt-2
+              mb-6
+            "
+          >
+            <a href={website}>
+              {websiteName}
+            </a>
+          </div>
         </div>
-        <Button
-          type="secondary"
+        <div
+        className="
+            md:mb-7
+          "
         >
-          Company Site
-        </Button>
+          <Button
+            type="secondary"
+          >
+            Company Site
+          </Button>
+      </div>
       </div>
     </div>
   )
