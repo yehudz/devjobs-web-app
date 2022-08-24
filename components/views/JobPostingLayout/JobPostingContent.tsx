@@ -97,13 +97,14 @@ React.FC<JobPostingContentProps> = ({
         {requirementsList.map(requirement=>{
           return(
             <li
-            className="
-              list-disc
-              pl-5
-              text-dark-gray
-              font-light
-              mb-3
-            "
+              key={requirement}
+              className="
+                list-disc
+                pl-5
+                text-dark-gray
+                font-light
+                mb-3
+              "
             >
               {requirement}
             </li>
@@ -137,13 +138,14 @@ React.FC<JobPostingContentProps> = ({
         {tasksList.map(task=>{
           return(
             <li
-            className="
-              list-disc
-              pl-5
-              text-dark-gray
-              font-light
-              mb-3
-            "
+              key={task}
+              className="
+                list-disc
+                pl-5
+                text-dark-gray
+                font-light
+                mb-3
+              "
             >
               {task}
             </li>
