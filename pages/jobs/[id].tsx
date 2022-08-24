@@ -1,13 +1,19 @@
+import JobPostingBanner from '../../components/views/JobPostingLayout/JobPostingBanner'
 import { JobPost } from '../../typings/common.types'
 import data from '../data.json'
 
 const JobPostPage = (props: JobPost)=> {
+  let job = props.job
   return(
-    <h1
-      className='
-        text-midnight
-      '
-    >{props.job.position}</h1>
+    <>
+      <JobPostingBanner 
+        icon={job.logo}
+        color={job.logoBackground}
+        company={job.company}
+        websiteName={job.websiteName}
+        website={job.website}
+      />
+    </>
   )
 }
 
