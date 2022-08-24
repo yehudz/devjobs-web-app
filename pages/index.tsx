@@ -6,6 +6,8 @@ import JobCard from '../components/ui/JobCard/JobCard'
 import { useContext, useEffect, useState } from 'react'
 import Button from '../components/ui/Button'
 import searchContext from '../context/searchContext'
+import SecondaryTopBar from "../components/ui/SecondaryTopBar"
+
 import Link from 'next/link'
 const Home: NextPage = (props) => {
   const [jobPosts, setJobPosts] = useState(props.jobs)
@@ -72,6 +74,8 @@ const Home: NextPage = (props) => {
         dark:bg-midnight 
       "
     >
+      <SecondaryTopBar />
+
       <PostingsContainer>
         {jobPosts.slice(0, limit)
         .map((jobPosting)=> {
