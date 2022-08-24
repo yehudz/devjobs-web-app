@@ -17,6 +17,7 @@ React.FC<JobPostingContentProps> = ({
       data-testid="page-content"
       className="
         bg-white
+        dark:bg-very-dark-blue
         mt-6
         max-w-[90%]
         xl:max-w-[1100px]

@@ -13,6 +13,7 @@ React.FC<JobPost> = ({
           justify-center
           w-full
           bg-white
+          dark:bg-very-dark-blue
           mt-16
         "
       >
