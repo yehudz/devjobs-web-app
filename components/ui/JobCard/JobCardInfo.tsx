@@ -60,8 +60,6 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
         className="
           dark:text-white
           text-midnight
-          text-xl
-          md:text-3xl
         "
       >
         {position}
