@@ -31,7 +31,7 @@ const SearchFilterComp: React.FC = ()=> {
       >
         <SearchInput 
           placeholder="Filter by title, companies, expertise..."
-          icon="assets/desktop/icon-search.svg"
+          icon="/assets/desktop/icon-search.svg"
           isSearch={true}
         />
       </div>
@@ -52,7 +52,7 @@ const SearchFilterComp: React.FC = ()=> {
       >
         <SearchInput 
           placeholder="Filter by location..."
-          icon="assets/desktop/icon-location.svg"
+          icon="/assets/desktop/icon-location.svg"
           isSearch={false}
         />
       </div>
@@ -110,7 +110,7 @@ const SearchFilterComp: React.FC = ()=> {
                 search-icon w-5
                 md:hidden
               "
-              src="assets/desktop/icon-search.svg" 
+              src="/assets/desktop/icon-search.svg" 
               alt="Search button" 
             />
             <p

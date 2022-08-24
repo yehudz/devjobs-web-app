@@ -25,7 +25,7 @@ const TopBar: React.FC = ()=> {
         "
       >
         <img 
-          src="assets/desktop/logo.svg" 
+          src="/assets/desktop/logo.svg" 
           alt="Logo" 
         />
       </div>

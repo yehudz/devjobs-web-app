@@ -5,7 +5,8 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
   contract,
   position,
   company,
-  location
+  location,
+  isContent
 })=> {
   return(
    <div 
@@ -13,6 +14,9 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
       flex
       flex-col
     "
+    style={{
+      marginBottom: isContent ? '50px' : ''
+    }}
    >
     <div
       className="
@@ -23,7 +27,10 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
         text-dark-gray
       "
     >
-      <p className="body">{postedAt}</p>
+      <p 
+        className="body"
+        data-testid="content-posted-at"
+      >{postedAt}</p>
       <div 
         className="
           h-1
@@ -33,15 +40,33 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
           mx-3
         "
       ></div>
-      <p className="body">{contract}</p>
+      <p 
+        className="body"
+        data-testid="content-contract"
+      >{contract}</p>
     </div>
-    <h3 
-      className="
-        dark:text-white
-        text-midnight
-      "
-    >{position}</h3>
+    {isContent ?
+      <h1 
+        data-testid="content-info-title"
+        className="
+          dark:text-white
+          text-midnight
+          text-xl
+          md:text-3xl
+        "
+      >{position}</h1> :
+      <h3
+        data-testid="content-info-title"
+        className="
+          dark:text-white
+          text-midnight
+        "
+      >
+        {position}
+      </h3>
+    }
     <p 
+      data-testid="company-name"
       className="
         body 
         text-dark-gray
@@ -51,10 +76,14 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
       {company}
     </p>
     <h4 
+      data-testid="content-location"
       className="
         text-violet
         mt-10
       "
+      style={{
+        marginTop: isContent ? '0px' : ''
+      }}
     >
       {location}
     </h4>

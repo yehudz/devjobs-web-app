@@ -32,7 +32,7 @@ const CheckboxComponent = ()=> {
           }}
     >
       {checked && <img 
-        src="assets/desktop/icon-check.svg" 
+        src="/assets/desktop/icon-check.svg" 
         alt="Check" 
       />}
       

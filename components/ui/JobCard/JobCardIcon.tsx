@@ -7,13 +7,15 @@ const JobCardIcon: React.FC<JobCardIconProps> = ({
 })=> {
   return(
     <div
+      data-testid="job-card-icon-container"
       className="
         flex
         justify-center
         items-center
         absolute
         top-0
-        left-8
+        left-[50%]
+        translate-x-[-50%]
         w-[50px]
         h-[50px]
         rounded-[14px]

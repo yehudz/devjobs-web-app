@@ -7,16 +7,8 @@ const JobCard: React.FC<JobCardProps> = ({
   info,
 })=> {
   return(
-    <div 
-      className="
-        container
-        relative
-        pt-6
-        max-w-[90%]
-        mt-7
-        md:max-w-[44%]
-        lg:max-w-[32%]
-      "
+    <div
+      data-testid="job-card-container"
     >
       <JobCardIcon 
           image={icon.image}
