@@ -9,7 +9,7 @@ import searchContext from '../context/searchContext'
 import SecondaryTopBar from "../components/ui/SecondaryTopBar"
 
 import Link from 'next/link'
-const Home: NextPage = (props) => {
+const Home: NextPage = (props: any) => {
   const [jobPosts, setJobPosts] = useState<JobPostCard[]>(props.jobs)
   const [limit, setLimit] = useState<number>(12)
   const {
@@ -36,7 +36,7 @@ const Home: NextPage = (props) => {
     ]
     if (searching) {
       let filteredData = data.filter(
-        (jobPost: JobPo)=> {
+        (jobPost: any)=> {
           return Object.keys(jobPost).some(
             (key)=> {
               return includeColumns.includes(key) ?
