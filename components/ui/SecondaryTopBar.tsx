@@ -11,7 +11,7 @@ const SecondaryTopBar: React.FC = ()=> {
         h-[80px]
         w-full
         max-w-[90%]
-        xl:max-w-[1100px]
+        xl:max-w-[1110px]
         mx-auto
         px-3
         mt-[-40px]

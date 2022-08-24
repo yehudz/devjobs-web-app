@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import PostingsContainer from '../components/views/PostingsContainer'
 import data from './data.json'
-import { JobPosting, JobCardIcon, JobCardInfo } from '../typings/common.types'
+import { JobCardIcon, JobCardInfo, JobPostCard } from '../typings/common.types'
 import JobCard from '../components/ui/JobCard/JobCard'
 import { useContext, useEffect, useState } from 'react'
 import Button from '../components/ui/Button'
@@ -78,7 +78,7 @@ const Home: NextPage = (props) => {
 
       <PostingsContainer>
         {jobPosts.slice(0, limit)
-        .map((jobPosting)=> {
+        .map((jobPosting: JobPostCard)=> {
           let icon: JobCardIcon = {
             image: jobPosting.logo,
             color: jobPosting.logoBackground,
@@ -103,9 +103,9 @@ const Home: NextPage = (props) => {
                 relative
                 pt-6
                 max-w-[90%]
-                mt-7
-                md:max-w-[44%]
-                lg:max-w-[32%]
+                mt-0
+                md:max-w-[43%]
+                lg:max-w-[31%]
               "
               >
                 <JobCard
@@ -139,17 +139,8 @@ const Home: NextPage = (props) => {
   )
 }
 
-// This function gets called at build time on server-side.
-// It won't be called on client-side, so you can even do
-// direct database queries.
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  // import data from './data.json'
   const jobs  = data
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
   return {
     props: {
       jobs,

@@ -45,6 +45,7 @@ const Button: React.FC<ButtonProps> = ({
         rounded-md
         font-regular
         font-bold
+        dark:text-white
         px-6
         min-w-full
         sm:min-w-[48px]
