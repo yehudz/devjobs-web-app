@@ -1,5 +1,5 @@
 import ToggleSwitch from "./ToggleSwitch"
-
+import Link from "next/link"
 const TopBar: React.FC = ()=> {
   return(
     <div 
@@ -25,20 +25,26 @@ const TopBar: React.FC = ()=> {
           h-full
         "
       >
-        <div 
-          data-testid="main-logo"
-          className="
-            logo
-            absolute
-            p-8
-            md:p-10
-          "
+        <Link
+          href={'/'}
         >
-          <img 
-            src="/assets/desktop/logo.svg" 
-            alt="Logo" 
-          />
-        </div>
+          <a>
+            <div 
+              data-testid="main-logo"
+              className="
+                logo
+                absolute
+                p-8
+                md:p-10
+              "
+            >
+              <img 
+                src="/assets/desktop/logo.svg" 
+                alt="Logo" 
+              />
+            </div>
+          </a>
+        </Link>
         <div 
           className="
             toggle-switch

@@ -13,6 +13,7 @@ React.FC<JobPost> = ({
           justify-center
           w-full
           bg-white
+          dark:bg-very-dark-blue
           mt-16
         "
       >
@@ -23,7 +24,7 @@ React.FC<JobPost> = ({
             justify-between
             w-full
             max-w-[90%]
-            xl:max-w-[1100px]
+            xl:max-w-[1110px]
             items-center
             py-6
           "

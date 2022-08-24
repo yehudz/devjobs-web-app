@@ -57,6 +57,16 @@ export type JobPost = {
     }
   }
 }
+export type JobPostCard = {
+  id: number
+  company: string
+  logo: string
+  logoBackground: string
+  position: string
+  postedAt: string
+  contract: string
+  location: string
+}
 
 export type SearchContext = {
   searchQuery: string

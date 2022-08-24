@@ -22,7 +22,7 @@ React.FC<JobPostingBannerProps> = ({
       md:h-[140px]
       w-full
       max-w-[90%]
-      xl:max-w-[1100px]
+      xl:max-w-[1110px]
       mx-auto
       pt-[26px]
       md:pt-0
