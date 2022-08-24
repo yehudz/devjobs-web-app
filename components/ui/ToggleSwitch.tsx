@@ -1,8 +1,18 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes" 
 const ToggleSwitch = ()=> {
     const [enabled, setEnabled] = useState(false);
+    const { theme, setTheme } = useTheme();
+    
+    useEffect(()=> {
+      setTheme("light")
+    }, [])
 
+    function switchTheme() {
+      setEnabled(!enabled)
+      setTheme(theme === "dark" ? "light" : "dark");
+    }
+    
     return (
         <div 
           data-testid="toggle-theme-container"
@@ -37,9 +47,7 @@ const ToggleSwitch = ()=> {
                 readOnly
               />
               <div
-                onClick={() => {
-                    setEnabled(!enabled);
-                }}
+                onClick={switchTheme}
                 className="
                   w-[45px] 
                   h-[23px] 
