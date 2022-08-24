@@ -15,12 +15,21 @@ React.FC<JobPostingContentProps> = ({
   return(
     <article
       data-testid="page-content"
+      className="
+        bg-white
+        mt-6
+        max-w-[90%]
+        rounded-lg
+        mx-auto
+        p-6
+      "
     >
       <JobCardInfo 
         postedAt={info.postedAt}
         position={info.position}
         location={info.location}
         contract={info.contract}
+        isContent={true}
       />
       <Link href={website}>
         <a
@@ -35,44 +44,90 @@ React.FC<JobPostingContentProps> = ({
       </Link>
       <p
         data-testid="content-body"
+        className="
+          body
+          text-dark-gray
+          my-8
+        "
       >
         {contentBody}
       </p>
       <h3
         data-testid="content-requirements-title"
+        className="
+          py-3
+        "
       >
         Requirements
       </h3>
       <p
         data-testid="content-requirements-body"
+        className="
+          body
+          text-dark-gray
+          my-6
+        "
       >
         {requirementsBody}
       </p>
       <ul
         data-testid="content-requirements-list"
+        className="
+          px-4
+          pb-6
+        "
       >
         {requirementsList.map(requirement=>{
           return(
-            <li>{requirement}</li>
+            <li
+            className="
+              list-disc
+              pl-5
+              text-dark-gray
+              font-light
+              mb-3
+            "
+            >
+              {requirement}
+            </li>
           )
         })}
       </ul>
       <h3
         data-testid="content-tasks-title"
+        className="
+          py-3
+        "
       >
         What You Will Do
       </h3>
       <p
         data-testid="content-tasks-body"
+        className="
+          body
+          text-dark-gray
+          my-6
+        "
       >
         {tasksBody}
       </p>
       <ul
         data-testid="content-tasks-list"
+        className="
+          px-4
+        "
       >
         {tasksList.map(task=>{
           return(
-            <li>
+            <li
+            className="
+              list-disc
+              pl-5
+              text-dark-gray
+              font-light
+              mb-3
+            "
+            >
               {task}
             </li>
           )

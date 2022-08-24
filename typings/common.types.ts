@@ -3,6 +3,7 @@ export type ButtonProps = {
   type: string
   icon?: string
   isPopup?: boolean
+  isMobile?: boolean
 };
 
 export type InputProps = {
@@ -18,6 +19,7 @@ export type JobCardInfo = {
   position: string
   company?: string
   location: string
+  isContent?: boolean
 }
 
 export type JobCardIcon = {

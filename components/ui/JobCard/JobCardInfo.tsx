@@ -5,7 +5,8 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
   contract,
   position,
   company,
-  location
+  location,
+  isContent
 })=> {
   return(
    <div 
@@ -13,6 +14,9 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
       flex
       flex-col
     "
+    style={{
+      marginBottom: isContent ? '50px' : ''
+    }}
    >
     <div
       className="
@@ -63,6 +67,9 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
         text-violet
         mt-10
       "
+      style={{
+        marginTop: isContent ? '0px' : ''
+      }}
     >
       {location}
     </h4>
