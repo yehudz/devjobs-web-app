@@ -45,13 +45,17 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
         data-testid="content-contract"
       >{contract}</p>
     </div>
-    <h3 
-      data-testid="content-info-title"
-      className="
-        dark:text-white
-        text-midnight
-      "
-    >{position}</h3>
+    {isContent &&
+      <h1 
+        data-testid="content-info-title"
+        className="
+          dark:text-white
+          text-midnight
+          text-xl
+          md:text-3xl
+        "
+      >{position}</h1>
+    }
     <p 
       className="
         body 
