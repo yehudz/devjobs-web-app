@@ -3,8 +3,6 @@ import JobPostingContent from '../../components/views/JobPostingLayout/JobPostin
 
 import { JobPost } from '../../typings/common.types'
 import data from '../data.json'
-import Link from 'next/link'
-import Button from '../../components/ui/Button'
 import JobPostingFooter from '../../components/views/JobPostingLayout/JobPostingFooter'
 const JobPostPage = (props: JobPost)=> {
   let job = props.job
