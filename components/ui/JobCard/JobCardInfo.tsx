@@ -45,7 +45,7 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
         data-testid="content-contract"
       >{contract}</p>
     </div>
-    {isContent &&
+    {isContent ?
       <h1 
         data-testid="content-info-title"
         className="
@@ -54,9 +54,21 @@ const JobCardInfo: React.FC<JobCardInfoProps> = ({
           text-xl
           md:text-3xl
         "
-      >{position}</h1>
+      >{position}</h1> :
+      <h3
+        data-testid="content-info-title"
+        className="
+          dark:text-white
+          text-midnight
+          text-xl
+          md:text-3xl
+        "
+      >
+        {position}
+      </h3>
     }
     <p 
+      data-testid="company-name"
       className="
         body 
         text-dark-gray

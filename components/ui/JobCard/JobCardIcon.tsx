@@ -7,6 +7,7 @@ const JobCardIcon: React.FC<JobCardIconProps> = ({
 })=> {
   return(
     <div
+      data-testid="job-card-icon-container"
       className="
         flex
         justify-center

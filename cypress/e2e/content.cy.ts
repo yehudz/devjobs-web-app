@@ -10,7 +10,8 @@ describe('Content shoudl display to the user', ()=> {
     cy.get('[data-testid="content-banner"]').should('exist')
   })
   it('should have a job info title', ()=> {
-    cy.get('[data-testid="content-info-title"]').should('exist')
+    cy.get('[data-testid="content-info-title"]')
+    .invoke('text').should('not.be.empty')
   })
   it('should have an apply button at the top', ()=> {
     cy.get('[data-testid="apply-button"]').eq(0).should('exist')
