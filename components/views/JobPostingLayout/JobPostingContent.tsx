@@ -19,35 +19,51 @@ React.FC<JobPostingContentProps> = ({
         bg-white
         mt-6
         max-w-[90%]
+        xl:max-w-[110px]
         rounded-lg
         mx-auto
         p-6
+        md:p-10
       "
     >
-      <JobCardInfo 
-        postedAt={info.postedAt}
-        position={info.position}
-        location={info.location}
-        contract={info.contract}
-        isContent={true}
-      />
-      <Link href={website}>
-        <a
-          data-testid="apply-button"
-        >
-          <Button
-            type="primary"
+      <div 
+        className="
+          md:flex
+          md:items-center
+          md:justify-between
+          w-full
+        "
+      >
+        <JobCardInfo 
+          postedAt={info.postedAt}
+          position={info.position}
+          location={info.location}
+          contract={info.contract}
+          isContent={true}
+        />
+        <Link href={website}>
+          <a
+            data-testid="apply-button"
+            className="
+              md:mb-8
+            "
           >
-            Apply Now
-          </Button>
-        </a>
-      </Link>
+            <Button
+              type="primary"
+            >
+              Apply Now
+            </Button>
+          </a>
+        </Link>
+      </div>
       <p
         data-testid="content-body"
         className="
           body
           text-dark-gray
           my-8
+          md:my-0
+          md:mb-8
         "
       >
         {contentBody}
